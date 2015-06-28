@@ -126,6 +126,7 @@ def front_back(a, b):
     b_front = b[:(len(b)/2) + 1]
     b_back = b[(len(b)/2) + 1:]
   return a_front + b_front + a_back + b_back
+  
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
