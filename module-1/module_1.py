@@ -118,7 +118,6 @@ def all_suc_who_have_increased_tuition_fee():
   suc_bs = []
   suc_ms = []
   suc_phd = []
-  index = 2
   for i, l in enumerate(f):
     row = l.split(',')
     if row[2].isdigit() and row[5].isdigit() and row[8].isdigit():
@@ -151,11 +150,6 @@ def get_discipline_with_highest_passing_rate_by_shool_year(year):
             dict[i] = [row[1], row[2], int((float(row[y])/float(row[index[x+1]]))*100)]
   sorted_list = sorted(dict.values(), key = operator.itemgetter(2), reverse = True)
   discipline = []
-
-  count = 0
-  for v in dict.values():
-    if v[1] == 'Accountancy':
-      count += 1
 
   for v in range(0, len(sorted_list)):
     if sorted_list[0][2] == sorted_list[v][2] and sorted_list[v][1] not in discipline:
