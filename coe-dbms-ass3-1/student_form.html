@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration System</title>
+	<link rel="stylesheet" href="/static/style.css" media="screen" title="no title" charset="utf-8">
+	<script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+</head>
+<body>
+	<div class="container">
+		<h2>STUDENT REGISTRATION FORM</h2>
+		<hr>
+		<div class="create-form">
+			<form class="student-form">
+				<input class="field" type="text" name="first_name" placeholder ="First Name" /><br>
+				<input class="field" type="text" name="last_name" placeholder ="Last Name" /><br>
+				<input class="field" type="text" name="age" placeholder ="Age" /><br>
+				<input type="submit" value="Create" class="submit-button"/>
+				<input type="reset" value="Clear Fields" class="clear-button"/>
+			</form>
+		</div>
+		<div class="create-list">
+			<ul class="student_list" id="student_list"></ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src='/static/script.js'></script>
+</html>

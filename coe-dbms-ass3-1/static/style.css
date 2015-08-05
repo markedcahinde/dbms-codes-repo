@@ -1,0 +1,32 @@
+body {
+
+}
+
+.container{
+  width: 50%;
+  margin: auto;
+}
+
+.create-list{
+  margin-top: 50px;
+}
+
+.student-form{
+  margin-top: 20px;
+  line-height: 20px;
+}
+form input[type="text"]{
+  margin-top: 10px;
+  line-height: 20px;
+  width: 100%;
+}
+form input[type="submit"].submit-button{
+  float: right;
+  margin-top: 20px;
+  position: relative;
+}
+form input[type="reset"].clear-button{
+  float: right;
+  margin-top: 20px;
+  position: relative;
+}
