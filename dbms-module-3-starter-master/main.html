@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.js'></script>
+    <script type="text/javascript" src='/static/jquery-1.11.3.js'></script>
 </head>
 <body>
 <div class='main'>
@@ -18,9 +18,9 @@
             <option value="2012">2012</option>
             <option value="2011">2011</option>
           </select>
-          <input type="text" name="thesis_title" placeholder="TITLE" />
-          <textarea name="thesis_absract" placeholder="ABSTRACT" > </textarea>
-          <input type="text" name="thesis_adviser" placeholder="ADVISER" />
+          <input class="field" type="text" name="thesis_title" placeholder="TITLE" />
+          <textarea class="field" name="thesis_abstract" placeholder="ABSTRACT" > </textarea>
+          <input class="field" type="text" name="thesis_adviser" placeholder="ADVISER" />
           <select name="thesis_section">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -29,12 +29,11 @@
             <option value="5">5</option>
           </select>
           <input type="submit" value="SUBMIT" />
-        </form>
     </div>
     <h1>LIST</h1>
     <div class='list-section'>
         <!-- your list here -->
-        <ul class="thesis-list"></ul>
+        <ul class="thesis_list"></ul>
     </div>
 </div>
 

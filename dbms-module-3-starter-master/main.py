@@ -42,7 +42,7 @@ class APIHandler(webapp2.RequestHandler):
 			'data' : thesis_list
 		}
 
-		self.response.headers['Content-Type'] = 'application.json'
+		self.response.headers['Content-Type'] = 'application/json'
 		self.response.out.write(json.dumps(response))
 
 	def post(self):
