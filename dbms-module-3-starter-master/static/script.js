@@ -1,25 +1,34 @@
-function onForm(event) {
-    var data = $(event.target).serializeArray();
-    var thesis = {}
+function onForm(event){
+  var data = $(event.target).serializeArray();
 
-    for (var i = 0; i <= data.length; i++) {
-      thesis[data[i].name] = data[i].value;
-    }
-
-    var thesis_api = '/api/thesis';
-    $.post(thesis_api, thesis, function(response) {
-      if (response.status = 'OK') {
-        var list_element = response.data.thesis_year + ' ' + response.data.thesis_title
-        $('.thesis_list').prepend('<li>' + list_element + '</li>');
-        //$('.field').val(''); //clear fields
-      } else {
-        alert('Something went wrong');
-      }
-    });
-
-    return false;
+  var thesis = {};
+  for (var i = 0; i < data.length; i++) {
+    thesis[data[i].name] = data[i].value;
   }
 
-    // your code here
+  var thesis_api = '/api/thesis';
+  $.post(thesis_api, thesis, function(response) {
+    console.log('data', response)
+    if (response.status = 'OK') {
+       var list_element = response.data.year + ' ' + response.data.title
+       $('.thesis-list').prepend('<li>' + list_element + '</li>'); // + '<a href="#">Update</a>');
+       $('.field').val(''); //clear fields
+     } else {
+       alert('Something went wrong');
+     }
+  });
+  return false;
+}
 
+function loadAll() {
+  var thesis_list_api = '/api/thesis';
+  $.get(thesis_list_api, {}, function(response) {
+    response.data.forEach(function(thesis_list) {
+      var thesis_item = thesis_list.year + ' ' + thesis_list.title;
+      $('.thesis-list').append('<li>' + thesis_item + '</li>'); // + '<a href="/edit/' + thesis_list.id + '">Update</a>');
+    });
+  });
+}
+
+loadAll();
 $('.thesis-entry').submit(onForm);

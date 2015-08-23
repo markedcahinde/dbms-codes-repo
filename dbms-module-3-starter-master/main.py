@@ -68,7 +68,6 @@ class APIHandler(webapp2.RequestHandler):
 		}
 		self.response.out.write(json.dumps(response))
 
-
 app = webapp2.WSGIApplication([
 	('/api/thesis', APIHandler),
 	('/home', MainPageHandler),
