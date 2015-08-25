@@ -26,19 +26,20 @@ class MainPageHandler(webapp2.RequestHandler):
 		user = users.get_current_user()
 
 		if user:
-			url = users.create_logout_url(self.request.uri)
+			logout_url = users.create_logout_url('/login')
 			link_text = 'Logout'
+			template_values = {
+				'logout_url':logout_url
+			}
+			template = JINJA_ENVIRONMENT.get_template('main.html')
 		else:
-			url = users.create_login_url(self.request.uri)
+			login_url = users.create_login_url('/home')
 			link_text = 'Login'
-			self.redirect(url)
+			template_values = {
+				'login_url':login_url
+			}
+			template = JINJA_ENVIRONMENT.get_template('login.html')
 
-		template_values = {
-			'user':user,
-			'url':url,
-			'link_text':link_text
-		}
-		template = JINJA_ENVIRONMENT.get_template('main.html')
 		self.response.write(template.render(template_values))
 
 class APIHandler(webapp2.RequestHandler):
@@ -90,8 +91,36 @@ class APIHandler(webapp2.RequestHandler):
 		}
 		self.response.out.write(json.dumps(response))
 
+# class EditHandler():
+# 	def get(self, thesis_id):
+# 		the_id = thesisentry.get_by_id(int(thesis_id))
+#
+# 		response = {
+# 			'result' : 'OK',
+# 			'data' : the_id
+# 		}
+#
+# 		self.response.headers['Content-Type'] = 'application.json'
+# 		self.response.out.write(json.dumps(response))
+
+class LoginHandler(webapp2.RequestHandler):
+	def get(self):
+		user = users.get_current_user()
+
+		login_url = users.create_login_url('/home')
+		template = JINJA_ENVIRONMENT.get_template('login.html')
+
+		template_data = {
+			'login_url': login_url
+		}
+
+		self.response.write(template.render(template_data))
+
+
 app = webapp2.WSGIApplication([
 	('/api/thesis', APIHandler),
+	# ('/edit/(.*)', EditHandler),
+	('/login', LoginHandler),
 	('/home', MainPageHandler),
 	('/', MainPageHandler)
 ], debug=True)

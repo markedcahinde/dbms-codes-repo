@@ -25,7 +25,7 @@ function loadAll() {
   $.get(thesis_list_api, {}, function(response) {
     response.data.forEach(function(thesis_list) {
       var thesis_item = thesis_list.year + ' ' + thesis_list.title;
-      $('.thesis-list').append('<li>' + thesis_item + ' addded by: ' + thesis_list.author + '</li>'); // + '<a href="/edit/' + thesis_list.id + '">Update</a>');
+      $('.thesis-list').append('<li>' + thesis_item + ' addded by: ' + thesis_list.author + '</li>'); //+ '<a href="/edit/' + thesis_list.id + '">Update</a>');
     });
   });
 }

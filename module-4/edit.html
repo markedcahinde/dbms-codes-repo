@@ -8,12 +8,12 @@
 <body>
 <div class='main'>
     <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
-    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <a href="{{url}}" style="float: right;">{{link_text}}</a>
     <br>
     <br>
     <div class='form-section'>
         <!-- your form here -->
-        <form class='thesis-entry'>
+        <form action="/edit/{{data.key.id}}" method="post" class='thesis-entry'>
           <select name="thesis_year">
             <option value="2015">2015</option>
             <option value="2014">2014</option>
@@ -21,9 +21,9 @@
             <option value="2012">2012</option>
             <option value="2011">2011</option>
           </select>
-          <input class="field" type="text" name="thesis_title" placeholder="TITLE" />
-          <textarea class="field" name="thesis_abstract" placeholder="ABSTRACT" > </textarea>
-          <input class="field" type="text" name="thesis_adviser" placeholder="ADVISER" />
+          <input class="field" type="text" name="thesis_title" placeholder="TITLE" value="{{thesis.thesis_title}}"/>
+          <textarea class="field" name="thesis_abstract" placeholder="ABSTRACT"value="{{thesis.thesis_abstract}}" > </textarea>
+          <input class="field" type="text" name="thesis_adviser" placeholder="ADVISER" value="{{thesis.thesis_adviser}}"/>
           <select name="thesis_section">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -31,13 +31,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <input type="submit" value="SUBMIT" />
+          <input type="submit" value="UPDATE" />
         </form>
-    </div>
-    <h1>LIST</h1>
-    <div class='list-section'>
-        <!-- your list here -->
-        <ul class="thesis-list"></ul>
     </div>
 </div>
 
