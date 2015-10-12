@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+</head>
+<body>
+<div class='main'>
+    <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
+    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <br>
+    <br>
+    <div class='form-section'>
+        <form class="university-update">
+          <input class="field" placeholder="UNIVERSITY NAME" name="university_name" value='{{item.university_name}}' />
+          <input class='field' placeholder='UNIVERSITY INITIAL' name='university_initial'  value='{{item.university_initial}}' />
+          <input class='field' placeholder='UNIVERSITY ADDRESS' name='university_address'  value='{{item.university_address}}' />
+          <input type="submit" value='SUBMIT' />
+        </form>
+        <form class='university-delete'>
+          <input type='submit' value='DELETE' />
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='/static/assets-university.js'></script>
+<script type="text/javascript">
+  function universityEdit(event)
+  {
+    var data = $(event.target).serializeArray();
+
+    var university = {};
+    for (var i = 0; i < data.length; i++) {
+      university[data[i].name] = data[i].value;
+    }
+
+    var user_api = '/university/{{item.key.id()}}';
+    $.post(user_api, university, function(response) {
+      console.log('data', response)
+      if (response.status = 'OK') {
+         alert('Registration success');
+         window.location.replace("/");
+       } else {
+         alert('Something went wrong');
+       }
+    });
+    return false;
+  }
+  function universityDelete(event)
+  {
+    var data = $(event.target).serializeArray();
+
+    var university = {};
+    var j = 0;
+    for (var i = 0; i < data.length; i++) {
+      university[data[i].name] = data[i].value;
+    }
+
+    var r = confirm("Are you sure you want to delete this entry?");
+
+    if (r == true) {
+      var university_api = '/university/{{item.key.id()}}/delete';
+      $.post(university_api, university, function(response) {
+      console.log(response)
+      if (response.status = 'OK') {
+         alert('Delete success');
+         window.location.replace("/");
+       } else {
+         alert('Something went wrong');
+       }
+    });
+    }
+    return false;
+  }
+  $('.university-update').submit(universityEdit);
+  $('.university-delete').submit(universityDelete);
+</script>
+</body>
+</html>

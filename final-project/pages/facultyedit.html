@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+    <script type="text/javascript" src='/static/jquery-ui.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/chosen.min.css" />
+    <script type="text/javascript" src='/static/chosen.jquery.min.js'></script>
+    <script type="text/javascript" src='/static/chosen.proto.min.js'></script> 
+    <link rel="stylesheet" type="text/css" href="/static/Pikaday/css/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="/static/Pikaday/css/site.css">
+</head>
+<body>
+<div class='main'>
+    <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
+    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <br>
+    <br>
+    <div class='form-section'>
+        <form class="faculty-update">
+          <select name='faculty_title' class='field'>
+            <option value=' '></option>
+            <option value='Mr.'>Mr.</option>
+            <option value='Ms.'>Ms.</option>
+            <option value='Dr.'>Dr.</option>
+            <option value='Engr.'>Engr.</option>
+            <option value='Prof.'>Prof.</option>
+          </select>
+          <input class="field faculty-fname" placeholder="FIRST NAME" name="faculty_fname" value='{{item.faculty_fname}}' />
+          <input class="field faculty-sname" placeholder="LAST NAME" name="faculty_sname" value='{{item.faculty_sname}}' />
+          <input class='field faculty-email' placeholder='EMAIL ADDRESS' name='faculty_email' value='{{item.faculty_email}}' />
+          <input class="field faculty-phone" placeholder="PHONE NUMBER" name="faculty_phone" value='{{item.faculty_phone}}'/>
+          <input type="text" id="datepicker" name='faculty_bday'>
+          <select class='chosen-select department-list' name='faculty_department'>
+            <option value='{{dept}}' selected>{{dept}}</option>
+          </select>
+          <input type="submit" value='SUBMIT' />
+        </form>
+        <form class='faculty-delete'>
+          <input type='submit' value='DELETE'>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='/static/assets-faculty.js'></script>
+<script type="text/javascript" src='/static/assets-department.js'></script>
+<script type="text/javascript" src='/static/Pikaday/pikaday.js'></script>
+<script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker'),
+    yearRange: [1950, 2015] });
+</script>
+<script type="text/javascript">
+function facultyEdit(event)
+{
+  var data = $(event.target).serializeArray();
+
+  var faculty = {};
+  for (var i = 0; i < data.length; i++) {
+    faculty[data[i].name] = data[i].value;
+  }
+
+  var faculty_api = '/faculty/{{item.key.id()}}';
+  $.post(faculty_api, faculty, function(response) {
+    console.log('data', response)
+    if (response.status = 'OK') {
+       alert('Registration success');
+       window.location.replace("/");
+     } else {
+       alert('Something went wrong');
+     }
+  });
+  return false;
+}
+
+ function facultyDelete(event)
+  {
+    var data = $(event.target).serializeArray();
+
+    var faculty = {};
+    var j = 0;
+    for (var i = 0; i < data.length; i++) {
+      faculty[data[i].name] = data[i].value;
+    }
+
+    var r = confirm("Are you sure you want to delete this entry?");
+
+    if (r == true) {
+      var faculty_api = '/faculty/{{item.key.id()}}/delete';
+      $.post(faculty_api, faculty, function(response) {
+      console.log(response)
+      if (response.status = 'OK') {
+         alert('Delete success');
+         window.location.replace("/");
+       } else {
+         alert('Something went wrong');
+       }
+    });
+    }
+    return false;
+  }
+
+
+$('.faculty-update').submit(facultyEdit);
+$('.faculty-delete').submit(facultyDelete);
+</script>
+</body>
+</html>

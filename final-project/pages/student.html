@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/chosen.min.css" />
+    <script type="text/javascript" src='/static/chosen.jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/static/Pikaday/css/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="/static/Pikaday/css/site.css">
+</head>
+<body>
+<div class='main'>
+    <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
+    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <br>
+    <br>
+    <div class='form-section'>
+        <form class="student-entry">
+          <input class="field" placeholder="FIRST NAME" name="student_fname" />
+          <input class="field" placeholder="LAST NAME" name="student_sname" />
+          <input class='field' placeholder='PHONE NUMBER' name='student_phone'>
+          <input class='field' placeholder='EMAIL ADDRESS' name='student_email' />
+          <input class='field' placeholder='STUDENT NUMBER' name='student_number'>
+          <input type="text" id="datepicker" name='student_bday' />
+         <br>
+          <select class='chosen-select field' id='yearGraduated' name='student_graduated'></select>
+           <select class='department-list' name='student_department'></select>
+          <input type="submit" value='SUBMIT' />
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='/static/assets-students.js'></script>
+<script type="text/javascript" src='/static/assets-department.js'></script>
+<script type="text/javascript" src='/static/Pikaday/pikaday.js'></script>
+<script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker'),
+    yearRange: [1950, 2015] });
+</script>
+<script type="text/javascript">
+    var min = new Date().getFullYear();
+        max = 1904;
+        select = document.getElementById('yearGraduated');
+
+    for (var i = min; i > max; i--){
+        var opt = document.createElement('option');
+        opt.value = i;
+        opt.innerHTML = i;
+        select.appendChild(opt);
+    }
+
+    select.value = new Date().getFullYear();
+    $('.chosen-select').chosen();
+</script>
+</body>
+</html>

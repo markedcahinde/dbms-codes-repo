@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.min.js'></script>
+</head>
+<body>
+<div class='main'>
+    <h3>Welcome to THESIS ARCHIVE, {{user}}</h3>
+    <a href="{{logout_url}}" style="float: right;">Logout</a>
+    <br>
+    <br>
+    <div class='form-section'>
+        <form class="university-entry">
+          <input class="field" placeholder="UNIVERSITY NAME" name="university_name" />
+          <input class='field' placeholder='UNIVERSITY INITIAL' name='university_initial' />
+          <input class='field' placeholder='UNIVERSITY ADDRESS' name='university_address'>
+          <input type="submit" value='SUBMIT' />
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='/static/assets-university.js'></script>
+</body>
+</html>
