@@ -1,0 +1,110 @@
+Skip to content
+Your account has been flagged.
+Because of that, your profile is hidden from the public. If you believe this is a mistake, contact support to have your account status reviewed.
+
+5x8 arduino security
+Repositories0
+Code149
+Commits0
+Issues2
+Marketplace0
+Topics0
+Wikis0
+Users0
+Languages
+44 Text
+22 CSV
+5 C++
+2 XML
+1 HTML
+1 Markdown
+1 Processing
+Advanced search 
+149 code results
+@amaxilat
+amaxilat/wiseApps – RedBackNeoPixel.ino
+Showing the top three matches Last indexed on Jun 26, 2018
+C++
+#include <Adafruit_NeoMatrix.h>
+#include <Adafruit_NeoPixel.h>
+#ifndef PSTR
+#define PSTR // Make Arduino Due happy
+#endif
+
+#define PIN 6
+// as a 5x8 tall matrix, with the USB port positioned at the top of the
+// Arduino.  When held that way, the first pixel is at the top right, and
+@melvinvdb
+melvinvdb/Jacuzzi – JacuzziV2.map
+Showing the top match Last indexed on Jul 4, 2018
+                0x00000000       0x33 ..\obj\u8g_dev_uc1611_dogxl240.o
+ .text          0x00000000        0x4 ..\obj\u8g_com_arduino_hw_usart_spi.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_arduino_hw_usart_spi.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_hw_usart_spi.o
+@W4LML
+W4LML/libraries – LiquidTWI.cpp.html
+Showing the top match Last indexed on Jun 29, 2018
+HTML
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>Arduino-LiquidTWI/LiquidTWI.cpp at master · Stephanie-Maks/Arduino-LiquidTWI · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+@Kazakov500
+Kazakov500/Projects-for-STM – demo.map
+Showing the top match Last indexed on Jul 11, 2018
+    u8g_dev_ili9325d_320x240.o(.data) refers to u8g_dev_ili9325d_320x240.o(.text) for u8g_dev_ili9325d_320x240_fn
+    u8g_dev_ili9325d_320x240.o(.data) refers to u8g_com_arduino_port_d_wr.o(.text) for u8g_com_arduino_port_d_wr_fn
+    u8g_dev_ks0108_128x64.o(.text) refers to u8g_com_api.o(.text) for u8g_InitCom
+@alixaxel
+alixaxel/dump.HN – 02-03.csv
+Showing the top two matches Last indexed on Jul 1, 2018
+CSV
+1079585,comment,1079122,1079262,0,0,dandelany,,,"Wait, so you want a tablet that is smaller than 5x8"", smaller than a netbook, and that fits in your pocket? You know you can buy those already from Apple, right?",1264559004
+1079581,comment,1079122,1079463,0,0,kowen,,,"To counter anecdotes with more anecdotes, I went to a code camp a few weeks ago, and there was an overwhelming number of laptops running Microsoft OS's. When I pulled out my mac book pro one guy actually commented on it. I saw one other person with a Mac -- it was dual-booting Windows XP.<p>Of course, I couldn't tell you how many of the participants are open source contributors.",1264558784
+1079580,story,,,1,0,r11t,"Using Ruby and Arduino for Unmanned Aerial Vehicles",http://rubyconf2009.confreaks.com/19-nov-2009-15-05-flying-robot-using-ruby-and-arduino-for-unmanned-aerial-vehicles-ron-evans-and-damen-evans.html,,1264558757
+@CoE-3
+CoE-3/pup-dbms-thesis-manager-3 – data.csv
+Showing the top three matches Last indexed on Jul 1, 2018
+CSV
+PUP,Engineering,COE,2011,Enhancement of Meeting Audio System with Voice Recorder,"As technology got more complicated in the past few decades, it became increasingly difficult and expensive to tinker with hardware. Audio system is an integral part of a meeting facility like conference rooms. Its design encompasses certain capabilities and functions. It may vary in size, complexity, physical principles and components used. The different meeting rooms often lack some technical features for an effective audio system. The primary purpose of this design project is to develop meeting audio system through the use of the Arduino technology. The project focuses on the overall design and functionality of an audio system ensuring efficiency and delivery of each system component. Arduino plays an important role in enhancing typical audio systems which relies on concepts of a sound system. By Arduino interfacing, certain functionalities and additional features are developed. Through research, interviews and surveys, relevant data has been gathered and used as the basic tool of how to enhance the basic design principles. The overall design and each component were carefully thought out, properly installed, and thoughtfully operated to accomplish the goal. As a result of completing the procedures, a project entitled “Enhancement of Meeting Audio System with Voice Recorder” has been created. The system can be used for different meeting rooms and has additional features such an auto-shut off, programmable volume controller, recorder and playback.",3,Antonio Velasco,E.J. Baccay,J. Nilooban,J.C. Padilla,M. Pambid,
+PUP,Engineering,COE,2012,Safety Deposit Box SMS-Based Security System,"           According to FBI statistics, Crime in the US Report (2003), a residence is broken at every fifteen seconds. This represents an alarm for every residence which is not protected by any sort of security system. The increase in the crime rate can be attributed to many factors. In recent years, this has been alarming so that now any ordinary individual fears for the safety of his valuables. This concern has given rise to the growing popularity and increasing demand for security safe boxes. The proponents thought of developing a security system called ""SAFETY BOX SMS-BASED SECURITY SYSTEM"" that would show the possible solution in making the previous safety box security systems more enhanced by making a more secured and automated systems by using SMS technology.                                                        The proponents gathered data, several studies and literature from different sources in order to formulate an answer to the stated problems. The proponents also conducted field researches and observations in order to gather significant information for the study. The  results of the research reserved served as the basis of the proponents in constructing the system.                                                         The proponents integrated the concept of SMS technology and ARDUINO microcontroller technology on security system.                            
+           For the development and future improvement of the system, the proponents recommended to the future researchers to utilize a higher calibre of material in manufacturing  their safe. In regards to marketability, the product can be advertised in either households or establishments.
+@Romzz
+Romzz/PUP-Thesis-Manager-App – PUP COE Thesis List.csv
+Showing the top three matches Last indexed on Jul 1, 2018
+CSV
+PUP,Engineering,COE,2011,Enhancement of Meeting Audio System with Voice Recorder,"As technology got more complicated in the past few decades, it became increasingly difficult and expensive to tinker with hardware. Audio system is an integral part of a meeting facility like conference rooms. Its design encompasses certain capabilities and functions. It may vary in size, complexity, physical principles and components used. The different meeting rooms often lack some technical features for an effective audio system. The primary purpose of this design project is to develop meeting audio system through the use of the Arduino technology. The project focuses on the overall design and functionality of an audio system ensuring efficiency and delivery of each system component. Arduino plays an important role in enhancing typical audio systems which relies on concepts of a sound system. By Arduino interfacing, certain functionalities and additional features are developed. Through research, interviews and surveys, relevant data has been gathered and used as the basic tool of how to enhance the basic design principles. The overall design and each component were carefully thought out, properly installed, and thoughtfully operated to accomplish the goal. As a result of completing the procedures, a project entitled “Enhancement of Meeting Audio System with Voice Recorder” has been created. The system can be used for different meeting rooms and has additional features such an auto-shut off, programmable volume controller, recorder and playback.",3,Antonio Velasco,E.J. Baccay,J. Nilooban,J.C. Padilla,M. Pambid,
+PUP,Engineering,COE,2012,Safety Deposit Box SMS-Based Security System,"           According to FBI statistics, Crime in the US Report (2003), a residence is broken at every fifteen seconds. This represents an alarm for every residence which is not protected by any sort of security system. The increase in the crime rate can be attributed to many factors. In recent years, this has been alarming so that now any ordinary individual fears for the safety of his valuables. This concern has given rise to the growing popularity and increasing demand for security safe boxes. The proponents thought of developing a security system called ""SAFETY BOX SMS-BASED SECURITY SYSTEM"" that would show the possible solution in making the previous safety box security systems more enhanced by making a more secured and automated systems by using SMS technology.                                                        The proponents gathered data, several studies and literature from different sources in order to formulate an answer to the stated problems. The proponents also conducted field researches and observations in order to gather significant information for the study. The  results of the research reserved served as the basis of the proponents in constructing the system.                                                         The proponents integrated the concept of SMS technology and ARDUINO microcontroller technology on security system.
+           For the development and future improvement of the system, the proponents recommended to the future researchers to utilize a higher calibre of material in manufacturing  their safe. In regards to marketability, the product can be advertised in either households or establishments.
+@CoE-8
+CoE-8/pup-dbms-thesis-manager-8 – thesis.csv
+Showing the top match Last indexed on Jul 1, 2018
+CSV
+Polytechnic University of the Philippines,Engineering,COE,2011,Enhancement of Meeting Audio System with Voice Recorder,"As technology got more complicated in the past few decades, it became increasingly difficult and expensive to tinker with hardware. Audio system is an integral part of a meeting facility like conference rooms. Its design encompasses certain capabilities and functions. It may vary in size, complexity, physical principles and components used. The different meeting rooms often lack some technical features for an effective audio system. The primary purpose of this design project is to develop meeting audio system through the use of the Arduino technology. The project focuses on the overall design and functionality of an audio system ensuring efficiency and delivery of each system component. Arduino plays an important role in enhancing typical audio systems which relies on concepts of a sound system. By Arduino interfacing, certain functionalities and additional features are developed. Through research, interviews and surveys, relevant data has been gathered and used as the basic tool of how to enhance the basic design principles. The overall design and each component were carefully thought out, properly installed, and thoughtfully operated to accomplish the goal. As a result of completing the procedures, a project entitled “Enhancement of Meeting Audio System with Voice Recorder” has been created. The system can be used for different meeting rooms and has additional features such an auto-shut off, programmable volume controller, recorder and playback.",3,Antonio Velasco,E.J. Baccay,J. Nilooban,J. C. Padilla,M. Pambid,
+@MicahGarcia
+MicahGarcia/pup-dbms-thesis-manager-5 – thes_list.csv
+Showing the top match Last indexed on Jul 1, 2018
+CSV
+Polytechnic University of the Philippines,Engineering,COE,2011,Enhancement of Meeting Audio System with Voice Recorder,"As technology got more complicated in the past few decades, it became increasingly difficult and expensive to tinker with hardware. Audio system is an integral part of a meeting facility like conference rooms. Its design encompasses certain capabilities and functions. It may vary in size, complexity, physical principles and components used. The different meeting rooms often lack some technical features for an effective audio system. The primary purpose of this design project is to develop meeting audio system through the use of the Arduino technology. The project focuses on the overall design and functionality of an audio system ensuring efficiency and delivery of each system component. Arduino plays an important role in enhancing typical audio systems which relies on concepts of a sound system. By Arduino interfacing, certain functionalities and additional features are developed. Through research, interviews and surveys, relevant data has been gathered and used as the basic tool of how to enhance the basic design principles. The overall design and each component were carefully thought out, properly installed, and thoughtfully operated to accomplish the goal. As a result of completing the procedures, a project entitled “Enhancement of Meeting Audio System with Voice Recorder” has been created. The system can be used for different meeting rooms and has additional features such an auto-shut off, programmable volume controller, recorder and playback.",3,Antonio Velasco,E.J. Baccay,J. Nilooban,J. C. Padilla,M. Pambid,
+@markedcahinde
+markedcahinde/dbms-codes-repo – data.csv
+Showing the top three matches Last indexed on Jun 30, 2018
+CSV
+PUP,Engineering,COE,2011,Enhancement of Meeting Audio System with Voice Recorder,"As technology got more complicated in the past few decades, it became increasingly difficult and expensive to tinker with hardware. Audio system is an integral part of a meeting facility like conference rooms. Its design encompasses certain capabilities and functions. It may vary in size, complexity, physical principles and components used. The different meeting rooms often lack some technical features for an effective audio system. The primary purpose of this design project is to develop meeting audio system through the use of the Arduino technology. The project focuses on the overall design and functionality of an audio system ensuring efficiency and delivery of each system component. Arduino plays an important role in enhancing typical audio systems which relies on concepts of a sound system. By Arduino interfacing, certain functionalities and additional features are developed. Through research, interviews and surveys, relevant data has been gathered and used as the basic tool of how to enhance the basic design principles. The overall design and each component were carefully thought out, properly installed, and thoughtfully operated to accomplish the goal. As a result of completing the procedures, a project entitled “Enhancement of Meeting Audio System with Voice Recorder” has been created. The system can be used for different meeting rooms and has additional features such an auto-shut off, programmable volume controller, recorder and playback.",3,Antonio Velasco,E.J. Baccay,J. Nilooban,J.C. Padilla,M. Pambid,
+PUP,Engineering,COE,2012,Safety Deposit Box SMS-Based Security System,"           According to FBI statistics, Crime in the US Report (2003), a residence is broken at every fifteen seconds. This represents an alarm for every residence which is not protected by any sort of security system. The increase in the crime rate can be attributed to many factors. In recent years, this has been alarming so that now any ordinary individual fears for the safety of his valuables. This concern has given rise to the growing popularity and increasing demand for security safe boxes. The proponents thought of developing a security system called ""SAFETY BOX SMS-BASED SECURITY SYSTEM"" that would show the possible solution in making the previous safety box security systems more enhanced by making a more secured and automated systems by using SMS technology.                                                        The proponents gathered data, several studies and literature from different sources in order to formulate an answer to the stated problems. The proponents also conducted field researches and observations in order to gather significant information for the study. The  results of the research reserved served as the basis of the proponents in constructing the system.                                                         The proponents integrated the concept of SMS technology and ARDUINO microcontroller technology on security system.                            
+           For the development and future improvement of the system, the proponents recommended to the future researchers to utilize a higher calibre of material in manufacturing  their safe. In regards to marketability, the product can be advertised in either households or establishments.
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
